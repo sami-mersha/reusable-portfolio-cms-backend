@@ -10,5 +10,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/profile', [ProfileController::class, 'index']);
+// Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/portfolio', [PortfolioController::class, 'index']);
