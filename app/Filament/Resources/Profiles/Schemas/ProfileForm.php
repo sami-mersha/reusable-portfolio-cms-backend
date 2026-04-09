@@ -27,6 +27,15 @@ class ProfileForm
                     ->url(),
                 FileUpload::make('image')
                     ->image(),
+                FileUpload::make('favicon')
+                    ->image(),
+                TextInput::make('linktree_url')
+                    ->url(),
+                TextInput::make('email')
+                    ->label('Email address')
+                    ->email(),
+                TextInput::make('phone')
+                    ->tel(),
             ]);
     }
 }

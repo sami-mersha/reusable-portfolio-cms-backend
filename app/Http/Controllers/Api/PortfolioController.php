@@ -25,6 +25,9 @@ class PortfolioController extends Controller
         if ($profile && $profile->image) {
             $profile->image_url = Storage::url($profile->image);
         }
+        if ($profile && $profile->favicon) {
+            $profile->favicon_url = Storage::url($profile->favicon);
+        }
 
         $projects = Project::all()->map(function ($project) {
             if ($project->image) {

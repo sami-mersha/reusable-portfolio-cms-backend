@@ -36,6 +36,14 @@ class ProfilesTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 ImageColumn::make('image'),
+                ImageColumn::make('favicon'),
+                TextColumn::make('linktree_url')
+                    ->searchable(),
+                TextColumn::make('email')
+                    ->label('Email address')
+                    ->searchable(),
+                TextColumn::make('phone')
+                    ->searchable(),
             ])
             ->filters([
                 //
