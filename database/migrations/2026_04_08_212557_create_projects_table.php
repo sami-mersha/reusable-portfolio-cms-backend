@@ -21,7 +21,7 @@ return new class extends Migration
             $table->json('tech_stack')->nullable(); // store as JSON
             $table->json('features')->nullable();   // store as JSON
             $table->boolean('is_featured')->default(false);
-            $table->enum('status', ['draft', 'published'])->default('draft');
+            $table->string('status', ['draft', 'active', 'on_hold', 'completed', 'signed', 'idle', 'published', 'terminated', 'expired', 'failed'])->default('draft');
             $table->timestamps();
         });
     }
